@@ -1,10 +1,11 @@
 package homeWork_3;
 
-import java.io.IOException;
+import java.io.*;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		System.setOut(new PrintStream(new FileOutputStream("output.txt")));
 		CStudentManager manager = new CStudentManager();
 		manager.loadStudentFile("student.csv");
 		manager.printStudent();
